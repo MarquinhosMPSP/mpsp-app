@@ -176,32 +176,32 @@ export default function Report({navigation}) {
             <Text style={styles.fieldText}>Autorizado Responsável:</Text>
             <Text style={styles.fieldText}>Bairro:</Text>
             <Text style={styles.dataText}>
-              {(report.autorizado_responsavel || {}).length > 0
-                ? report.autorizado_responsavel[0].bairro
+              {report.autorizado_responsavel
+                ? report.autorizado_responsavel.bairro
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>CEP:</Text>
             <Text style={styles.dataText}>
-              {(report.autorizado_responsavel || {}).length > 0
-                ? report.autorizado_responsavel[0].cep
+              {report.autorizado_responsavel
+                ? report.autorizado_responsavel.cep
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>CNPJ CPF CEI:</Text>
             <Text style={styles.dataText}>
-              {(report.autorizado_responsavel || {}).length > 0
-                ? report.autorizado_responsavel[0].cnpj_cpf_ce
+              {report.autorizado_responsavel
+                ? report.autorizado_responsavel.cnpj_cpf_ce
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>CPF:</Text>
             <Text style={styles.dataText}>
-              {(report.autorizado_responsavel || {}).length > 0
-                ? report.autorizado_responsavel[0].cpf
+              {report.autorizado_responsavel
+                ? report.autorizado_responsavel.cpf
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>Email:</Text>
             <Text style={styles.dataText}>
-              {(report.autorizado_responsavel || {}).length > 0
-                ? report.autorizado_responsavel[0].email
+              {report.autorizado_responsavel
+                ? report.autorizado_responsavel.email
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>Empresa:</Text>
@@ -214,118 +214,84 @@ export default function Report({navigation}) {
             <Text style={styles.fieldText}>Totais:</Text>
             <Text style={styles.fieldText}>Admissões:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.admissoes
-                : '-'}
+              {report.empresa ? report.empresa.totais.admissoes : '-'}
             </Text>
             <Text style={styles.fieldText}>Desligamentos:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.desligamentos
-                : '-'}
+              {report.empresa ? report.empresa.totais.desligamentos : '-'}
             </Text>
             <Text style={styles.fieldText}>Números filiais:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.numeros_filiais
-                : '-'}
+              {report.empresa ? report.empresa.totais.numeros_filiais : '-'}
             </Text>
             <Text style={styles.fieldText}>Primeiro dia:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.primeiro_dia
-                : '-'}
+              {report.empresa ? report.empresa.totais.primeiro_dia : '-'}
             </Text>
             <Text style={styles.fieldText}>Total vínculos:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.total_vinculo
-                : '-'}
+              {report.empresa ? report.empresa.totais.total_vinculo : '-'}
             </Text>
             <Text style={styles.fieldText}>Último dia:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].totais.ultimo_dia
-                : '-'}
+              {report.empresa ? report.empresa.totais.ultimo_dia : '-'}
             </Text>
             <Text style={styles.fieldText}>Variação absoluta:</Text>
             <Text style={styles.dataText}>
-              {(report.empresa || {}).length > 0
-                ? report.empresa[0].variacao_absoluta
-                : '-'}
+              {report.empresa ? report.empresa.variacao_absoluta : '-'}
             </Text>
             <Text style={styles.fieldText}>Trabalhador:</Text>
             <Text style={styles.fieldText}>CPF:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].cpf
-                : '-'}
+              {report.trabalhador ? report.trabalhador.cpf : '-'}
             </Text>
             <Text style={styles.fieldText}>CTPS:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].ctps
-                : '-'}
+              {report.trabalhador ? report.trabalhador.ctps : '-'}
             </Text>
             <Text style={styles.fieldText}>Grau de Instrução:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].grau_de_instrucao
-                : '-'}
+              {report.trabalhador ? report.trabalhador.grau_de_instrucao : '-'}
             </Text>
             <Text style={styles.fieldText}>Nacionalidade:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].nacionalidade
-                : '-'}
+              {report.trabalhador ? report.trabalhador.nacionalidade : '-'}
             </Text>
             <Text style={styles.fieldText}>Nome:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].nome
-                : '-'}
+              {report.trabalhador ? report.trabalhador.nome : '-'}
             </Text>
             <Text style={styles.fieldText}>PCD:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].pcd
-                : '-'}
+              {report.trabalhador ? report.trabalhador.pcd : '-'}
             </Text>
             <Text style={styles.fieldText}>PIS Base:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].pis_base
-                : '-'}
+              {report.trabalhador ? report.trabalhador.pis_base : '-'}
             </Text>
             <Text style={styles.fieldText}>Raça:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].raca
-                : '-'}
+              {report.trabalhador ? report.trabalhador.raca : '-'}
             </Text>
             <Text style={styles.fieldText}>Sexo:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].sexo
-                : '-'}
+              {report.trabalhador ? report.trabalhador.sexo : '-'}
             </Text>
             <Text style={styles.fieldText}>Situação PIS:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].situacao_pis
-                : '-'}
+              {report.trabalhador ? report.trabalhador.situacao_pis : '-'}
             </Text>
             <Text style={styles.fieldText}>Tempo de trabalho</Text>
             <Text style={styles.fieldText}>CAGED</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].tempo_trabalho.caged
+              {report.trabalhador
+                ? report.trabalhador.tempo_trabalho.caged
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>RAIS:</Text>
             <Text style={styles.dataText}>
-              {(report.trabalhador || {}).length > 0
-                ? report.trabalhador[0].tempo_trabalho.rais
+              {report.trabalhador
+                ? report.trabalhador.tempo_trabalho.rais
                 : '-'}
             </Text>
             <Text style={styles.fieldText}>Vínculos do trabalhador:</Text>
