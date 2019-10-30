@@ -221,51 +221,51 @@ export default function Report({ navigation }) {
               <Text style={styles.fieldText}>Empresa:</Text>
               <Text style={styles.fieldText}>Atividade Econômica CNAE:</Text>
               <Text style={styles.dataText}>
-                {(report.empresa || {}).atividade_economica_cnae
-                  ? report.empresa.atividade_economica_cnae
+                {((report.empresa || {}) || {}).atividade_economica_cnae
+                  ? (report.empresa || {}).atividade_economica_cnae
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Totais:</Text>
               <Text style={styles.fieldText}>Admissões:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.admissoes
-                  ? report.empresa.totais.admissoes
+                {((report.empresa || {}).totais || {}).admissoes
+                  ? ((report.empresa || {}).totais || {}).admissoes
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Desligamentos:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.desligamentos
-                  ? report.empresa.totais.desligamentos
+                {((report.empresa || {}).totais || {}).desligamentos
+                  ? ((report.empresa || {}).totais || {}).desligamentos
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Números filiais:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.numero_filiais
-                  ? report.empresa.totais.numero_filiais
+                {((report.empresa || {}).totais || {}).numero_filiais
+                  ? ((report.empresa || {}).totais || {}).numero_filiais
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Primeiro dia:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.primeiro_dia
-                  ? report.empresa.totais.primeiro_dia
+                {((report.empresa || {}).totais || {}).primeiro_dia
+                  ? ((report.empresa || {}).totais || {}).primeiro_dia
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Total vínculos:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.total_vinculos
-                  ? report.empresa.totais.total_vinculos
+                {((report.empresa || {}).totais || {}).total_vinculos
+                  ? ((report.empresa || {}).totais || {}).total_vinculos
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Último dia:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.totais.ultimo_dia
-                  ? report.empresa.totais.ultimo_dia
+                {((report.empresa || {}).totais || {}).ultimo_dia
+                  ? ((report.empresa || {}).totais || {}).ultimo_dia
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Variação absoluta:</Text>
               <Text style={styles.dataText}>
-                {report.empresa.variacao_absoluta
-                  ? report.empresa.variacao_absoluta
+                {(report.empresa || {}).variacao_absoluta
+                  ? (report.empresa || {}).variacao_absoluta
                   : '-'}
               </Text>
               <Text style={styles.fieldText}>Trabalhador:</Text>
